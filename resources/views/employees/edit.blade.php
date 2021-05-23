@@ -5,10 +5,10 @@
 <a  class="btn btn-primary" href="{{ route('Employees.index') }}">Back</a>
 <br>
 <br>
-
+{{-- <form method="POST" action="{{ route('Employees.update', [$employee->id])}}" --}}
 <form method="POST" action="{{ route('Employees.update', $employee->id)}}">
+{{-- <form method="POST" action="{{ route('Employees.update', ['employee' => $employee->id]) }}"> --}}
     @csrf
-
 
 @method('PUT')
   <div class="mb-3">
@@ -37,12 +37,7 @@
 
   </div>
 
-  {{-- <select name="author_id" id="" class="form-control">
-<option value="" selected disabled>Pasirinkite šalį</option>
-@foreach ($authors as $author)
-<option value="{{ $author->id }}" @if($author->id == $book->author_id) selected="selected" @endif>{{ $author->name }}</option>
-@endforeach
-</select> --}}
+
   <button type="submit" class="btn btn-info">Submit</button>
 </form>
 @endsection

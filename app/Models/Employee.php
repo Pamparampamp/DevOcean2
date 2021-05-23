@@ -11,7 +11,7 @@ class Employee extends Model
 
 
 
-    public $fillable = ['firstname', 'lastname', 'email','phone', 'company_id'];
+    public $fillable = ['Firstname', 'Lastname','company_id', 'email','phone', ];
 public function Company(){
 return $this->belongsTo('App\Models\Company');
 }
